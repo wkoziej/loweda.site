@@ -1,0 +1,140 @@
+---
+layout: layouts/base.njk
+title: Kontakt
+---
+
+<div class="container">
+  <h1 class="mb-4">Kontakt</h1>
+  
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card contact-card h-100">
+        <div class="card-body">
+          <h2 class="card-title mb-4">Umów wizytę</h2>
+          <p>Zapraszam do kontaktu w celu umówienia konsultacji, masażu lub innej terapii ajurwedyjskiej.</p>
+          
+          <div class="social-icons mt-4 mb-4">
+            {% if site.social.facebook %}
+            <a href="{{ site.social.facebook }}" target="_blank" class="btn btn-outline-primary btn-with-bg me-2 mb-2" title="Facebook">
+              <i class="bi bi-facebook fs-4"></i>
+              <span class="ms-2">Facebook</span>
+            </a>
+            {% endif %}
+          </div>
+          
+          <h4 class="mt-4">Informacje przed wizytą</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3">
+              <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+              <span>{{ site.address }}</span>
+            </li>
+            {% if site.email %}
+            <li class="mb-3">
+              <i class="bi bi-envelope-fill text-primary me-2"></i>
+              <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+            </li>
+            {% endif %}
+            {% if site.phone %}
+            <li class="mb-3">
+              <i class="bi bi-telephone-fill text-primary me-2"></i>
+              <a href="tel:{{ site.phone }}">{{ site.phone }}</a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 mt-4 mt-md-0">
+      <div class="card h-100">
+        <div class="card-body">
+          <h2 class="card-title mb-4">Najczęściej zadawane pytania</h2>
+          
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  Jak przygotować się do konsultacji ajurwedyjskiej?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Przed konsultacją ajurwedyjską warto przygotować listę swoich dolegliwości, historię zdrowia oraz listę przyjmowanych leków. Dobrze jest również przyjść na pusty żołądek (2-3 godziny po posiłku), aby badanie pulsu było bardziej dokładne.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Jak długo trwa sesja masażu ajurwedyjskiego?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Standardowa sesja masażu ajurwedyjskiego trwa około 60-90 minut, w zależności od rodzaju masażu i indywidualnych potrzeb. Na pierwszą wizytę warto zarezerwować więcej czasu (około 2 godzin), aby przeprowadzić również wstępną konsultację.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Czy Ajurweda jest dla każdego?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Tak, Ajurweda jest dla każdego, niezależnie od wieku czy stanu zdrowia. Jako holistyczny system medycyny, Ajurweda dostosowuje zalecenia do indywidualnej konstytucji każdej osoby. Warto jednak pamiętać, że niektóre terapie ajurwedyjskie mogą mieć przeciwwskazania przy określonych stanach zdrowia, dlatego ważna jest wstępna konsultacja.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .social-icons a {
+    transition: all 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    transform: translateY(-3px);
+  }
+  
+  .contact-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .btn-with-bg {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-width: 2px;
+    font-weight: 500;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    background-color: rgba(13, 110, 253, 0.1);
+    color: #0d6efd;
+  }
+  
+  .accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  }
+  
+  @media (max-width: 768px) {
+    .social-icons a {
+      display: block;
+      width: 100%;
+      margin-right: 0 !important;
+    }
+  }
+</style> 

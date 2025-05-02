@@ -1,0 +1,16 @@
+{
+  "name": "loweda-site",
+  "version": "1.0.0",
+  "description": "Loweda - Konsultacje i terapie ajurwedyjskie",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve --quiet",
+    "build": "npx @11ty/eleventy"
+  },
+  "keywords": [],
+  "author": "Edyta Lowecka",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+} 

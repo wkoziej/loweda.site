@@ -1,6 +1,42 @@
 # Loweda Site
 
-Prosta strona "Hello World" serwowana przez GitHub Pages.
+Oficjalna strona internetowa firmy Loweda, specjalizującej się w konsultacjach ajurwedyjskich, masażach ajurwedyjskich, terapiach oczyszczających oraz aromaterapii.
+
+## Informacje o projekcie
+
+Strona została stworzona przy użyciu:
+
+- [Eleventy](https://www.11ty.dev/) (generator stron statycznych)
+- [Bootstrap 5](https://getbootstrap.com/) (framework CSS)
+- [Bootstrap Icons](https://icons.getbootstrap.com/) (zestaw ikon)
+
+## Uruchamianie lokalnie
+
+1. Zainstaluj zależności projektu:
+```
+npm install
+```
+
+2. Uruchom serwer deweloperski:
+```
+npm start
+```
+
+3. Otwórz przeglądarkę pod adresem `http://localhost:8080`
+
+## Budowanie projektu
+
+Aby zbudować wersję produkcyjną strony:
+
+```
+npm run build
+```
+
+Pliki zostaną wygenerowane w katalogu `dist/`.
+
+## Hostowanie
+
+Strona może być hostowana na GitHub Pages, Netlify, Vercel lub innej platformie obsługującej statyczne strony internetowe.
 
 ## Opis
 

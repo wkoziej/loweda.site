@@ -1,0 +1,23 @@
+<header class="bg-white shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <span class="fw-bold text-primary">{{ site.name }}</span>
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          {%- for item in navigation.main -%}
+          <li class="nav-item">
+            <a class="nav-link{% if page.url == item.url %} active{% endif %}" href="{{ item.url }}">{{ item.text }}</a>
+          </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header> 
